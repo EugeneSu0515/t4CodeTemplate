@@ -1,0 +1,141 @@
+﻿@model TestTemplate.Models.Customer
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+	<div class="form-horizontal">
+        <h4>Customer</h4>
+
+		<div class="form-group">
+            @Html.LabelFor(model => model.NameStyle, new { @class = "control-label col-md-2" })
+        <div class="col-md-4">
+			@Html.TextBoxFor(model => model.NameStyle, new{ @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.NameStyle)
+        </div>
+		</div>
+
+		<div class="form-group">
+            @Html.LabelFor(model => model.Title, new { @class = "control-label col-md-2" })
+        <div class="col-md-4">
+			@Html.TextBoxFor(model => model.Title, new{ @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Title)
+        </div>
+		</div>
+
+		<div class="form-group">
+            @Html.LabelFor(model => model.FirstName, new { @class = "control-label col-md-2" })
+        <div class="col-md-4">
+			@Html.TextBoxFor(model => model.FirstName, new{ @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.FirstName)
+        </div>
+		</div>
+
+		<div class="form-group">
+            @Html.LabelFor(model => model.MiddleName, new { @class = "control-label col-md-2" })
+        <div class="col-md-4">
+			@Html.TextBoxFor(model => model.MiddleName, new{ @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.MiddleName)
+        </div>
+		</div>
+
+		<div class="form-group">
+            @Html.LabelFor(model => model.LastName, new { @class = "control-label col-md-2" })
+        <div class="col-md-4">
+			@Html.TextBoxFor(model => model.LastName, new{ @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.LastName)
+        </div>
+		</div>
+
+		<div class="form-group">
+            @Html.LabelFor(model => model.Suffix, new { @class = "control-label col-md-2" })
+        <div class="col-md-4">
+			@Html.TextBoxFor(model => model.Suffix, new{ @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Suffix)
+        </div>
+		</div>
+
+		<div class="form-group">
+            @Html.LabelFor(model => model.CompanyName, new { @class = "control-label col-md-2" })
+        <div class="col-md-4">
+			@Html.TextBoxFor(model => model.CompanyName, new{ @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.CompanyName)
+        </div>
+		</div>
+
+		<div class="form-group">
+            @Html.LabelFor(model => model.SalesPerson, new { @class = "control-label col-md-2" })
+        <div class="col-md-4">
+			@Html.TextBoxFor(model => model.SalesPerson, new{ @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.SalesPerson)
+        </div>
+		</div>
+
+		<div class="form-group">
+            @Html.LabelFor(model => model.EmailAddress, new { @class = "control-label col-md-2" })
+        <div class="col-md-4">
+			@Html.TextBoxFor(model => model.EmailAddress, new{ @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.EmailAddress)
+        </div>
+		</div>
+
+		<div class="form-group">
+            @Html.LabelFor(model => model.Phone, new { @class = "control-label col-md-2" })
+        <div class="col-md-4">
+			@Html.TextBoxFor(model => model.Phone, new{ @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Phone)
+        </div>
+		</div>
+
+		<div class="form-group">
+            @Html.LabelFor(model => model.PasswordHash, new { @class = "control-label col-md-2" })
+        <div class="col-md-4">
+			@Html.TextBoxFor(model => model.PasswordHash, new{ @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.PasswordHash)
+        </div>
+		</div>
+
+		<div class="form-group">
+            @Html.LabelFor(model => model.PasswordSalt, new { @class = "control-label col-md-2" })
+        <div class="col-md-4">
+			@Html.TextBoxFor(model => model.PasswordSalt, new{ @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.PasswordSalt)
+        </div>
+		</div>
+
+		<div class="form-group">
+            @Html.LabelFor(model => model.rowguid, new { @class = "control-label col-md-2" })
+        <div class="col-md-4">
+			@Html.TextBoxFor(model => model.rowguid, new{ @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.rowguid)
+        </div>
+		</div>
+
+		<div class="form-group">
+            @Html.LabelFor(model => model.ModifiedDate, new { @class = "control-label col-md-2" })
+        <div class="col-md-4">
+			@Html.TextBoxFor(model => model.ModifiedDate, new{ @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.ModifiedDate)
+        </div>
+		</div>
+
+        <p>
+			<button type="submit" class="btn btn-primary tip" data-toggle="tooltip" data-placement="top" 
+			title="新增"><span class="glyphicon glyphicon-plus-sign"></span></button> |
+			<a href="@Url.Action("Index")" class="btn btn-default tip" data-toggle="tooltip" data-placement="top" 
+			title="回到顯示列表"><span class="glyphicon glyphicon-th-list"></span></a>
+        </p>
+	</div>
+
+    
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

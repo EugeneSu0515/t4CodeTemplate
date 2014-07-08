@@ -1,0 +1,118 @@
+﻿@model TestTemplate.Models.Customer
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3 class="bg-danger">你確認要刪除嗎?</h3>
+<fieldset>
+    <legend>Customer</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NameStyle)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NameStyle)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Title)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Title)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FirstName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FirstName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MiddleName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MiddleName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LastName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LastName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Suffix)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Suffix)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CompanyName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CompanyName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SalesPerson)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SalesPerson)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EmailAddress)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EmailAddress)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Phone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Phone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PasswordHash)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PasswordHash)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PasswordSalt)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PasswordSalt)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.rowguid)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.rowguid)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ModifiedDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ModifiedDate)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <button type="submit" class="btn btn-danger tip" data-toggle="tooltip" data-placement="top" 
+			title="確認刪除"><span class="glyphicon glyphicon-remove-sign"></span></button> |
+        <a href="@Url.Action("Index")" class="btn btn-default tip" data-toggle="tooltip" data-placement="top" 
+		title="回到顯示列表"><span class="glyphicon glyphicon-th-list"></span></a>
+    </p>
+}
